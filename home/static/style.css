@@ -1,0 +1,156 @@
+
+
+header {
+    color: #FFFFFF;
+    background-color: black;
+    text-align: center;
+    height: 250px;
+}
+
+.field {
+    overflow: auto; /* this "clears" the floated elements */
+    margin-bottom: 10px;
+    align-items: center;
+    margin: auto;
+    width: 20%;
+    height: 30px;
+}
+
+.field label {
+    padding: 10px;
+
+}
+
+.float-left {
+float:left;
+width:300px;
+}
+
+
+
+.firstHalf {
+    color:lightskyblue;
+    font-weight:normal;
+    font-family:Arial;
+    vertical-align: text-bottom;
+}
+.secondHalf {
+    color:#FBFCFC;
+    font-weight:normal;
+    font-family:Arial;
+    vertical-align: text-bottom;
+}
+.byLine{
+    width: 100%;
+    font-size: 50px;
+}
+
+#logoName{
+
+    padding-bottom: 0;
+    font-size:150px;
+    margin-bottom: -20px;
+}
+#subLogo{
+
+    padding-top: 0;
+    vertical-align: top;
+    margin-top: -10px;
+
+}
+
+#titleLine{
+    background-color:lightskyblue;
+    text-align: center;
+    font-size: 55px;
+    height: 105px;
+    padding-top: 15px;
+}
+.title{
+    color: #FFFFFF;
+    font-family:Arial;
+    vertical-align: text-top;
+}
+
+#secondline{
+    text-align: center;
+    font-size: 50px;
+    height: 105px;
+    vertical-align: middle;
+}
+
+.second{
+    color: black;
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+}
+
+.level{
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+    font-size: 30px;
+    color: lightskyblue;
+}
+
+.leveltext{
+    font-family: Arial;
+    font-size: 25px;
+}
+
+#firstpart{
+    float: left;
+    width: 66.67%;
+    height: 270px;
+}
+#secondpart{
+    width: 33.33%;
+    height: 270px;
+    float: right;
+    text-align: center;
+}
+#first1{
+    width: 49.8%;
+    height: 270px;
+    float: left;
+    border-right: 1px solid black;
+    text-align: center;
+}
+#first2{
+    width: 50%;
+    height: 270px;
+    float: right;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+#Introduction{
+    height: 250px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.options{
+    font-size: 50px;
+
+}
+a {
+    color: lightskyblue;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+a.nounderline {
+text-decoration: none;
+}
+
+#titleLine1{
+    background-color:lightskyblue;
+    text-align: center;
+    font-size: 48px;
+    height: 105px;
+    padding-top: 15px;
+}
+.title1{
+    color: #FFFFFF;
+    font-family:Arial;
+    vertical-align: text-top;
+}

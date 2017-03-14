@@ -1,0 +1,73 @@
+
+
+header {
+    color: #FFFFFF;
+    background-color: black;
+    text-align: center;
+    height: 350px;
+}
+
+
+.firstHalf {
+    color:#16E4D0;
+    font-weight:normal;
+    font-family:Arial;
+    vertical-align: text-bottom;
+
+}
+.secondHalf {
+    color:#FBFCFC;
+    font-weight:normal;
+    font-family:Arial;
+    vertical-align: text-bottom;
+
+}
+.byLine{
+    width: 100%;
+    font-size: 50px;
+}
+
+#logoName{
+
+    padding-bottom: 0;
+    font-size:150px;
+    margin-bottom: -20px;
+}
+#subLogo{
+
+    padding-top: 0;
+    vertical-align: top;
+    margin-top: -10px;
+
+}
+
+#titleLine{
+    background-color: #16E4D0;
+    text-align: center;
+    font-size: 70px;
+    height: 150px;
+    padding-top: 35px;
+}
+.title{
+    color: #FFFFFF;
+    font-family:Arial;
+    vertical-align: text-top;
+}
+
+#secondline{
+    background-color: azure;
+    text-align: center;
+    font-size: 60px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.second{
+    color: black;
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+}
+
+#button{
+
+    font-size: 20px;
+}
