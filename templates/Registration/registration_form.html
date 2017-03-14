@@ -1,0 +1,35 @@
+
+{% load static %}
+    <link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+
+<div class="container">
+
+<header>
+    <div id="logoName">
+        <span class="firstHalf">home</span><span class="secondHalf">ania</span>
+    </div>
+    <div id="subLogo">
+        <span class = "byLine">real estate marketing services</span>
+    </div>
+</header>
+
+<div id="titleLine">
+    <span class="title">PHOTOGRAPHER CERTIFICATION PROGRAM</span>
+</div>
+<div class="register">
+    <div class="panel-body">
+        <h3>Register for an Account</h3>
+        {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+        <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'home/form_template.html' %}
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

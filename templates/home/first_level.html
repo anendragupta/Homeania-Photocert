@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+        {% load static %}
+
+
+<link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<header>
+    <div id="logoName">
+        <span class="firstHalf">home</span><span class="secondHalf">ania</span>
+    </div>
+    <div id="subLogo">
+        <span class = "byLine">real estate marketing services</span>
+    </div>
+</header>
+
+<div id="titleLine1">
+    <span class="title1">PHOTOGRAPHER CERTIFICATION PROGRAM</span></br>
+    <span class="title1">LEVEL 1</span>
+</div>
+
+<div id="nav" align="right" >
+    <span class="firstHalf" aria-hidden="true">Hello {{request.user.username | title}}</span>&nbsp;|
+    <a href="/static/media/pdf/PhotographerCertification.pdf" class="nonunderline" target="_blank" ">&nbsp; Download</a> |
+    <a href="#"><span aria-hidden="true"></span>&nbsp; Logout</a>
+</div>
+
+<div id="Introduction">
+    <span class="Intro">Introduction to our system and real estate photography Introduction to our system and real estate</br>
+                        photography Introduction to our system and real estate photography Introduction to our system and</br>
+                        real estate photography Introduction to our system and real estate photography Introduction to our</br>
+                        system and real estate photography Introduction to our system and real estate photography</br>
+                        Introduction to our system and real estate photography Introduction to our system and real estate</br>
+                        photography</br>
+                        Introduction to our system and real estate photography Introduction to our system and real estate</br>
+                        photography Introduction to our system and real estate photography</br></span>
+        <p><b><a href="#" class="nonunderline" target="_blank" ><h3>Quiz</h3></a></b></p>
+        <p><b><a href="{% url 'home:image_form_upload' %}" class="nonunderline" target="_blank" ><h2>Practical Test</h2></a></b></p>
+</body>
+</html>

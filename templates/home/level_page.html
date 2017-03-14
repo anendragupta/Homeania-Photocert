@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+    {% load static %}
+
+<link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<style type="text/css"> a.nounderline {text-decoration: none; }</style>
+
+
+<div class="container">
+
+<header>
+    <div id="logoName">
+        <span class="firstHalf">home</span><span class="secondHalf">ania</span>
+    </div>
+    <div id="subLogo">
+        <span class = "byLine">real estate marketing services</span>
+    </div>
+</header>
+
+<div id="titleLine">
+    <span class="title">PHOTOGRAPHER CERTIFICATION PROGRAM</span>
+</div>
+
+<div id="nav" align="right" >
+    <b><span class="firstHalf" aria-hidden="true">Hello {{request.user.username | title}}</span>&nbsp;</b> |
+    <a href="#"><span aria-hidden="true"></span>&nbsp; Logout</a>
+</div>
+
+<div id="secondline">
+    <span class="second">Choose the level you would like to work on</span>
+</div>
+
+<div id="firstpart">
+
+    <div id="first1">
+        <a href="{% url 'home:first_level' %}" class="nounderline"><span class="level" >LEVEL 1</span></a></br></br>
+        <span class="leveltext">Introduction to our</br>system and real estate</br>photography</br>Completion of this</br>course will allow you</br>to shoot our standard</br>orders</span>
+    </div>
+
+    <div id="first2">
+        <a href="{% url 'home:second_level' %}" class="nounderline"><span class="level" >LEVEL 2</span></a></br></br>
+        <span class="leveltext">Real Estate</br>Videography and HDR</br>photography</br>Completion of this</br>level will allow you to</br>shoot our deluxe</br>package</span>
+    </div>
+
+</div>
+
+<div id="secondpart">
+    <a href="{% url 'home:third_level' %}" class="nounderline"><span class="level" >LEVEL 3</span></a></br></br>
+    <span class="leveltext">Aerial Photography</br>and beyond.</br>Completion of this</br>level will allow you to</br>shoot our aerial</br>add-on package.</span>
+</div>
+
+</body>
+</html>

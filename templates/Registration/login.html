@@ -1,0 +1,38 @@
+{% extends "home/base.html" %}
+{% block content %}
+    {% load static %}
+    <link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+
+<div id="login">
+        <h1 align="center">Please login Below</h1>
+        <form class="form-horizontal" name="Login" action="/login/" method="post">
+        {% csrf_token %}
+
+        <div class="field" >
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"  placeholder="Enter your username" >
+        </div>
+
+
+        <div class="field">
+            <label for="password" >Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your Password">
+        </div>
+
+        <div class="field">
+            <div class="field-subject" align="center">
+                <button type="submit" class="btn">Login</button>
+            </div>
+        </div>
+            {# Assumes you setup the password_reset view in your URLconf #}
+            <p align="center"><a href="{% url 'password_reset' %}" >Lost password?</a></p>
+
+{% endblock %}
+        </form>
+</div>
+
+
+
+
+
+
