@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% for q in mcq %}
+    <p class="question">1: {{ q.question }}</p>
+<ul class="answers">
+<input type="radio" name="q{{ q.id  }}" value="a" id="q1a"><label for="q1a">{{ q.ans1 }}</label><br/>
+<input type="radio" name="q{{ q.id  }}" value="b" id="q1b"><label for="q1b">{{ q.ans3 }}</label><br/>
+<input type="radio" name="q{{ q.id  }}" value="c" id="q1c"><label for="q1c">{{ q.ans3 }}</label><br/>
+<input type="radio" name="q{{ q.id  }}" value="d" id="q1d"><label for="q1d">{{ q.ans4 }}</label><br/>
+</ul>
+{% endfor %}
+</body>
+</html>

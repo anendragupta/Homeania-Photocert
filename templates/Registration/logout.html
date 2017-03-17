@@ -1,0 +1,10 @@
+{% extends "home/base.html" %}
+{% block content %}
+    {% load static %}
+    <link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+<div id="logout" align="center">
+    <h1>Thanks for visiting</h1>
+    <h1>Hope to see you again</h1>
+    <a href="{% url 'login' %}">Log-in again</a>
+</div>
+{% endblock %}

@@ -6,7 +6,12 @@ header {
     text-align: center;
     height: 250px;
 }
-
+#footer {
+    color: #FFFFFF;
+    background-color: black;
+    text-align: right;
+    height: 50px;
+}
 .field {
     overflow: auto; /* this "clears" the floated elements */
     margin-bottom: 10px;
@@ -154,3 +159,18 @@ text-decoration: none;
     font-family:Arial;
     vertical-align: text-top;
 }
+
+.button {
+    background-color: lightskyblue;
+    border: snow;
+    color: black;
+    padding: 2px 30px;
+    text-align: center;
+    text-decoration: none!important;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+

@@ -109,15 +109,16 @@ MEDIA_URL = '/static/media/'
 
 #Redirecting user after successful login
 
-LOGIN_REDIRECT_URL= '/home/level/'
+LOGIN_REDIRECT_URL='/home/level/'
+LOGOUT_REDIRECT_URL='logout'
 
 #Send emails
 
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'testsite_app'
-EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
+EMAIL_HOST_USER = 'sendgrid_username'
+EMAIL_HOST_PASSWORD = 'sendgrid_password'
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'TestSite Team <gupta.anendra@gmail.com>'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

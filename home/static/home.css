@@ -4,12 +4,12 @@ header {
     color: #FFFFFF;
     background-color: black;
     text-align: center;
-    height: 350px;
+    height: 250px;
 }
 
 
 .firstHalf {
-    color:#16E4D0;
+    color:lightskyblue;
     font-weight:normal;
     font-family:Arial;
     vertical-align: text-bottom;
@@ -42,10 +42,10 @@ header {
 }
 
 #titleLine{
-    background-color: #16E4D0;
+    background-color: lightskyblue;
     text-align: center;
     font-size: 70px;
-    height: 150px;
+    height: 130px;
     padding-top: 35px;
 }
 .title{
@@ -67,7 +67,48 @@ header {
     font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
 }
 
-#button{
 
-    font-size: 20px;
+a {
+    background-color: azure;
+    color: lightskyblue;
+    text-decoration: none;
+    font-size: 45px;
+
+}
+
+.button {
+    background-color: lightskyblue;
+    border: snow;
+    color: black;
+    padding: 14px 30px;
+    text-align: center;
+    text-decoration: none!important;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+h5 {
+    line-height: 0;
+    font-size: 15px;
+    color: #767676;
+    font-weight: 400;
+    z-index: 2;
+    position:relative;
+    display: inline-block;
+    padding: 0 8px 0 7px;
+    margin-top: 0;
+    box-sizing: border-box;
+
+}
+#footer {
+    color: #FFFFFF;
+    background-color: black;
+    text-align: right;
+    height: 50px;
+}
+#secondline{
+    height: 300px;
 }

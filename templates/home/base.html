@@ -7,7 +7,7 @@
 
     {% load static %}
 
-<link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+<link href="{% static "home.css" %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -29,27 +29,25 @@
 </div>
 
 {% block content %}
-{% block register_form %}
+    <div id="secondline">
+        <span class="second">Give Wings to your Passion </span></br>
+        <a href="{% url 'login' %}" class="button" >Login</a>
+        </br>
+        <h5>---------First time here?---------</h5>
+        </br>
+        <a href="{% url 'register' %}" class="button">Create an account</a>
+    </div>
 
+    <div id="footer">
 
-<div id="secondline">
-    <span class="second">Give Wings to your Passion </span></br></br>
-    <a href="{% url 'login' %}" class="nounderline">Sign-in</a></br></br>
-    <a href="{% url 'register' %}" class="nounderline">Create New Account</a>
-
+    </div>
+{% endblock %}
 </div>
 
 
-
-
-{% endblock %}
-{% endblock %}
-
-
-
-</div>
 
 </body>
+
 
 
 

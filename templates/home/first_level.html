@@ -26,20 +26,17 @@
 
 <div id="nav" align="right" >
     <span class="firstHalf" aria-hidden="true">Hello {{request.user.username | title}}</span>&nbsp;|
-    <a href="/static/media/pdf/PhotographerCertification.pdf" class="nonunderline" target="_blank" ">&nbsp; Download</a> |
+    <a href="/static/media/pdf/Real state Photography Guide.pdf" class="nonunderline" target="_blank" ">&nbsp; Download</a> |
     <a href="#"><span aria-hidden="true"></span>&nbsp; Logout</a>
 </div>
 
 <div id="Introduction">
-    <span class="Intro">Introduction to our system and real estate photography Introduction to our system and real estate</br>
-                        photography Introduction to our system and real estate photography Introduction to our system and</br>
-                        real estate photography Introduction to our system and real estate photography Introduction to our</br>
-                        system and real estate photography Introduction to our system and real estate photography</br>
-                        Introduction to our system and real estate photography Introduction to our system and real estate</br>
-                        photography</br>
-                        Introduction to our system and real estate photography Introduction to our system and real estate</br>
-                        photography Introduction to our system and real estate photography</br></span>
-        <p><b><a href="#" class="nonunderline" target="_blank" ><h3>Quiz</h3></a></b></p>
+    <span class="Intro">Photography has never been more important to selling real estate than it is today.</br>
+        The markets are heating up again and demand for real estate creates demand for photography.</br>
+        This is good news to photographers, but like any business,</br> there is plenty of competition.
+        If you are new to real estate and architecture photography.</br></span>
+        here are some general guidelines to start you on the right path.
+        <p><b><a href="{% url 'home:quiz_question' 1%}" class="nonunderline" target="_blank" ><h3>Quiz</h3></a></b></p>
         <p><b><a href="{% url 'home:image_form_upload' %}" class="nonunderline" target="_blank" ><h2>Practical Test</h2></a></b></p>
 </body>
 </html>

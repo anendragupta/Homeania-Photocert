@@ -1,14 +1,17 @@
 from django.shortcuts import render,redirect,HttpResponse
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from django.views.generic import View
 from .form import UserForm,ImageForm
+from .models import First_Level
 import os
 
 
 def index(request):
     return render(request,'home/base.html')
 
+@login_required(login_url='/login/')
 def level(request):
     return render(request,'home/level_page.html')
 
@@ -27,6 +30,11 @@ def second_level(request):
 
 def third_level(request):
     return render(request,'home/third_level.html')
+
+def logout_view(request):
+    logout(request)
+    return render(request,'registration/logout.html')
+
 
 class UserFormView(View):
     form_class = UserForm
@@ -59,12 +67,14 @@ class UserFormView(View):
 
                 if user.is_active:
                     login(request, user)
-                    return redirect('home:index')
+                    return redirect('home:level')
 
         return render(request,self.template_name,{'form':form})
 
 def image_form_upload(request):
     if request.method == 'POST':
+        print request.POST
+        print request.FILES
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
@@ -73,7 +83,8 @@ def image_form_upload(request):
         form = ImageForm()
     return render(request,'home/Image_upload_form.html', {'form':form})
 
+def quiz_question(request, level_id):
 
-
-
+    mcq = First_Level.objects.all()
+    return render(request, 'home/quiz.html', {'mcq':mcq})
 

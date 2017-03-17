@@ -33,7 +33,7 @@
 
 <div id="nav" align="right" >
     <b><span class="firstHalf" aria-hidden="true">Hello {{request.user.username | title}}</span>&nbsp;</b> |
-    <a href="#"><span aria-hidden="true"></span>&nbsp; Logout</a>
+    <a href="{% url 'home:logout' %}"><span aria-hidden="true"></span>&nbsp; Logout</a>
 </div>
 
 <div id="secondline">

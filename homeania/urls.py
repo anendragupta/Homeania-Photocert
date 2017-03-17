@@ -10,7 +10,7 @@ urlpatterns = [
     #Registartion/login and logout URL
     url(r'^register/', UserFormView.as_view(), name='register'),
     url(r'^login/', auth_view.login, name="login"),
-    url(r'^logout/', auth_view.logout, name='logout'),
+
 
     #password Reset URL
     url(r'^passowrd_reset/$', auth_view.password_reset, name='password_reset'),
