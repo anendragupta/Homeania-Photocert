@@ -5,14 +5,38 @@
     <title></title>
 </head>
 <body>
-{% for q in mcq %}
-    <p class="question">1: {{ q.question }}</p>
-<ul class="answers">
-<input type="radio" name="q{{ q.id  }}" value="a" id="q1a"><label for="q1a">{{ q.ans1 }}</label><br/>
-<input type="radio" name="q{{ q.id  }}" value="b" id="q1b"><label for="q1b">{{ q.ans3 }}</label><br/>
-<input type="radio" name="q{{ q.id  }}" value="c" id="q1c"><label for="q1c">{{ q.ans3 }}</label><br/>
-<input type="radio" name="q{{ q.id  }}" value="d" id="q1d"><label for="q1d">{{ q.ans4 }}</label><br/>
-</ul>
+{% load static %}
+<link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+
+
+<div id="titleLine1">
+    <span class="title1">PHOTOGRAPHER CERTIFICATION PROGRAM</span></br>
+    <span class="title1">LEVEL 1</span>
+</div>
+
+<div id="nav" align="right" >
+    <span class="firstHalf" aria-hidden="true">Hello {{request.user.username | title}}</span>&nbsp;|
+    <a href="#"><span aria-hidden="true"></span>&nbsp; Logout</a>
+</div>
+
+{% for val in context %}
+    <h2>{{ val.question }}</h2>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="q1a"><input type="radio" name="q{{ forloop.c }}" value="a" id="q1a">{{ val.option1 }}</label><br/>
+    <label for="q1b"><input type="radio" name="q" value="b" id="q1b">{{ val.option2 }}</label><br/>
+    <label for="q1c"><input type="radio" name="q" value="c" id="q1c">{{ val.option3 }}</label><br/>
+    <label for="q1d"><input type="radio" name="q" value="d" id="q1d">{{ val.option4 }}</label><br/>
+    </br>
 {% endfor %}
+
+</br>
+</form>
+<a href="{% url 'home:save' %}" class="button">Submit</a>
+
 </body>
 </html>
+
+
+

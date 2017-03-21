@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Practical_test(models.Model):
     description = models.CharField(max_length=500)
@@ -8,37 +9,37 @@ class Practical_test(models.Model):
         return self.description
 
 
-class First_Level(models.Model):
+class First_level(models.Model):
     question = models.CharField(max_length=200)
-    ans1 = models.CharField(max_length=200)
-    ans2 = models.CharField(max_length=200)
-    ans3 = models.CharField(max_length=200)
-    ans4 = models.CharField(max_length=200)
-    correct_ans = models.CharField(max_length=200, default=None)
+    option1 = models.CharField(max_length=200)
+    option2 = models.CharField(max_length=200)
+    option3 = models.CharField(max_length=200)
+    option4 = models.CharField(max_length=200)
+    correct_option = models.CharField(max_length=200, default=None)
 
     def __str__(self):
         return self.question
 
-class Second_Level(models.Model):
+
+class Second_level(models.Model):
     question = models.CharField(max_length=200)
-    ans1 = models.CharField(max_length=200)
-    ans2 = models.CharField(max_length=200)
-    ans3 = models.CharField(max_length=200)
-    ans4 = models.CharField(max_length=200)
-    correct_ans = models.CharField(max_length=200, default=None)
+    option1 = models.CharField(max_length=200)
+    option2 = models.CharField(max_length=200)
+    option3 = models.CharField(max_length=200)
+    option4 = models.CharField(max_length=200)
+    correct_option = models.CharField(max_length=200, default=None)
 
     def __str__(self):
         return self.question
 
-class Third_Level(models.Model):
+class Third_level(models.Model):
     question = models.CharField(max_length=200)
-    ans1 = models.CharField(max_length=200)
-    ans2 = models.CharField(max_length=200)
-    ans3 = models.CharField(max_length=200)
-    ans4 = models.CharField(max_length=200)
-    correct_ans = models.CharField(max_length=200, default=None)
+    option1 = models.CharField(max_length=200)
+    option2 = models.CharField(max_length=200)
+    option3 = models.CharField(max_length=200)
+    option4 = models.CharField(max_length=200)
+    correct_option = models.CharField(max_length=200, default=None)
 
     def __str__(self):
         return self.question
-
 

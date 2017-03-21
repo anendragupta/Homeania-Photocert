@@ -1,10 +1,10 @@
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render,redirect,HttpResponse,get_object_or_404
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from .models import Practical_test,Second_level,First_level,Third_level
 from django.views.generic import View
 from .form import UserForm,ImageForm
-from .models import First_Level
 import os
 
 
@@ -15,6 +15,7 @@ def index(request):
 def level(request):
     return render(request,'home/level_page.html')
 
+@login_required(login_url='/login/')
 def pdf_download(request, filename):
   path = os.expanduser('~/media/pdf/')
   wrapper = FileWrapper(file(filename,'rb'))
@@ -62,7 +63,7 @@ class UserFormView(View):
 
             #return user objects if credentials are correct
             user = authenticate(username=username,password=password)
-            print user
+
             if user is not None:
 
                 if user.is_active:
@@ -71,10 +72,9 @@ class UserFormView(View):
 
         return render(request,self.template_name,{'form':form})
 
+@login_required(login_url='/login/')
 def image_form_upload(request):
     if request.method == 'POST':
-        print request.POST
-        print request.FILES
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
@@ -83,8 +83,26 @@ def image_form_upload(request):
         form = ImageForm()
     return render(request,'home/Image_upload_form.html', {'form':form})
 
-def quiz_question(request, level_id):
+@login_required(login_url='/login/')
+def quiz_question(request,level_id):
+    id= level_id.__str__()
+    if id == '1':
+        context = First_level.objects.all()
+        return render(request, 'home/quiz.html', {'context': context})
+    if id == '2':
+        context = Second_level.objects.all()
+        return render(request, 'home/quiz.html', {'context': context})
+    if id == '3':
+        context = Third_level.objects.all()
+        return render(request, 'home/quiz.html', {'context': context})
 
-    mcq = First_Level.objects.all()
-    return render(request, 'home/quiz.html', {'mcq':mcq})
+def save(request):
+    for x in range(1,10):
+        print ">>>>>"
+        print 'q'+x.__str__()
+        p=request.POST.get("q", None)
+        if p in ['a','b','c','d']:
+            print "Matchhhhh"
+        print p
+    return redirect('home:index')
 

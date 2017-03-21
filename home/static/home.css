@@ -104,9 +104,9 @@ h5 {
 
 }
 #footer {
-    color: #FFFFFF;
     background-color: black;
     text-align: right;
+    font: 10px;
     height: 50px;
 }
 #secondline{

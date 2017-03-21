@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^practical_test/', views.image_form_upload, name="image_form_upload"),
     url(r'^quiz/(?P<level_id>[0-9]+)/$', views.quiz_question, name='quiz_question'),
     url(r'^logout/', views.logout_view, name='logout'),
+    url(r'^save/', views.save, name='save'),
 ]
